@@ -9,7 +9,7 @@ import org.aeonbits.owner.Config;
 public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")
-    @DefaultValue("https://webinar.ru/")
+    @DefaultValue("https://webinar.ru")
     String getBaseUrl();
 
     @Key("browser")

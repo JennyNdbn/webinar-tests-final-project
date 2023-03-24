@@ -1,9 +1,15 @@
 package ru.nadobnaya.pages;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BlogPage {
+
+    public BlogPage openPage() {
+        open(baseUrl + "/blog");
+        return this;
+    }
 
     public BlogPage verifyBlogHeader() {
         $(".header-inner").shouldHave(text("Про онлайн-технологии для бизнеса, работы и образования от компании Webinar Group"));

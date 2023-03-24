@@ -55,31 +55,6 @@ public class WebinarTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Testing of blog opening")
-    @Owner("Evgeniia Nadobnaia")
-    @Feature("Testing of webinar.ru")
-    @Story("Testing of opening blog window from header and verifying blog header, article and footer")
-    @Severity(SeverityLevel.CRITICAL)
-    @Tag("remote")
-    void blogTest() {
-        step("Open main page", () -> {
-            mainPage.openPage();
-        });
-        step("Open blog page from header", () -> {
-            mainPage.openBlog();
-        });
-        step("Verify blog header", () -> {
-            blogPage.verifyBlogHeader();
-        });
-        step("Verify blog article", () -> {
-            blogPage.verifyBlogArticle();
-        });
-        step("Verify blog footer", () -> {
-            blogPage.verifyBlogFooter();
-        });
-    }
-
-    @Test
     @DisplayName("Testing of COMDI product page")
     @Owner("Evgeniia Nadobnaia")
     @Feature("Testing of webinar.ru")
