@@ -23,7 +23,7 @@ public class VacancyPage {
 
     public VacancyPage openCVWindow() {
         coverContent.$(byText("Отправить резюме")).click();
-        switchTo().window(2);
+        switchTo().window(1);
         return this;
     }
 
