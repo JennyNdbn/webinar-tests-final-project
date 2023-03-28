@@ -12,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class BlogTests extends TestBase {
 
     @Test
-    @DisplayName("Testing of blog page content")
+    @DisplayName("Testing of blog page opening")
     @Feature("Testing of blog page content")
     @Story("Testing of opening blog window from header and verifying blog header, article and footer")
     @Severity(SeverityLevel.CRITICAL)

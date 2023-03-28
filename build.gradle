@@ -3,18 +3,28 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
+def allureVersion = "2.21.0",
+//    assertJVersion = "3.24.2",
+    junitJupiterVersion = "5.9.2",
+    ownerVersion = "1.0.12",
+    selenideVersion = "6.12.4",
+    slf4jVersion = "2.0.6"
+//    restAssuredVersion = "5.3.0",
+//    jacksonDatabindVersion = "2.14.2"
+
+
 group 'qa.guru'
 version '1.0-SNAPSHOT'
 
 allure {
     report {
-        version.set("2.20.1")
+        version.set(allureVersion)
     }
     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
-                adapterVersion.set("2.20.1") //версия интеграции фреймворка и Allure
+                adapterVersion.set(allureVersion) //версия интеграции фреймворка и Allure
             }
         }
     }
@@ -25,13 +35,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation (
-            "com.codeborne:selenide:6.11.0",
-            "com.github.javafaker:javafaker:1.0.2",
-            "org.junit.jupiter:junit-jupiter:5.9.2",
-            "io.qameta.allure:allure-selenide:2.20.1",
-            "org.slf4j:slf4j-simple:2.0.6",
-            "org.aeonbits.owner:owner:1.0.12")
+    testImplementation(
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.junit.jupiter:junit-jupiter:$junitJupiterVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion"
+    )
 }
 
 tasks.withType(JavaCompile) {

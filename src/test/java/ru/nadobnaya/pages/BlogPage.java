@@ -1,13 +1,12 @@
 package ru.nadobnaya.pages;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BlogPage {
 
     public BlogPage openPage() {
-        open(baseUrl + "/blog");
+        open("/blog");
         return this;
     }
 
