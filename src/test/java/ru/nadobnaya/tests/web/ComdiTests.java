@@ -3,6 +3,7 @@ package ru.nadobnaya.tests.web;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -15,7 +16,7 @@ public class ComdiTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening COMDI page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
-    @Tag("remote")
+    @Tags({@Tag("UI"),@Tag("COMDI")})
     void openProductComdiPageTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -35,7 +36,7 @@ public class ComdiTests extends TestBase {
     @Story("Testing of request popup on COMDI product page")
     @Feature("Testing of webinar.ru")
     @Severity(SeverityLevel.CRITICAL)
-    @Tag("remote")
+    @Tags({@Tag("UI"),@Tag("COMDI")})
     void popupComdiTest() {
         step("Open COMDI product page", () -> {
             productComdiPage.openPage();
@@ -59,7 +60,7 @@ public class ComdiTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of details button on COMDI product page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tag("remote")
+    @Tags({@Tag("UI"),@Tag("COMDI")})
     void detailsButtonComdiTest() {
         step("Open COMDI product page", () -> {
             productComdiPage.openPage();

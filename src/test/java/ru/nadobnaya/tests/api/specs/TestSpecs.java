@@ -1,7 +1,6 @@
 package ru.nadobnaya.tests.api.specs;
 
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
@@ -18,7 +17,7 @@ public class TestSpecs {
             .log().headers()
             .log().body()
             .filter(withCustomTemplates())
-            .contentType(ContentType.JSON);
+            .contentType("application/x-www-form-urlencoded; charset=utf-8");
     public static ResponseSpecification testResponseSpecWithStatus = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
