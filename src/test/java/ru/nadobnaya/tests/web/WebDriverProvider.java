@@ -1,4 +1,4 @@
-package ru.nadobnaya.tests;
+package ru.nadobnaya.tests.web;
 
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;

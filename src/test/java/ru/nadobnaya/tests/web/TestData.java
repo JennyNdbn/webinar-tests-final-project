@@ -1,4 +1,4 @@
-package ru.nadobnaya.tests;
+package ru.nadobnaya.tests.web;
 
 public class TestData {
     int oneMonthPeriod = 0;

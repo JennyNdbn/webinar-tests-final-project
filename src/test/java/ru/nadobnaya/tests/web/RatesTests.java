@@ -1,4 +1,4 @@
-package ru.nadobnaya.tests;
+package ru.nadobnaya.tests.web;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
