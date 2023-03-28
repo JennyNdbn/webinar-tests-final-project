@@ -1,16 +1,17 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
+    id "io.freefair.lombok" version "6.5.1"
 }
 
 def allureVersion = "2.21.0",
-//    assertJVersion = "3.24.2",
+    assertJVersion = "3.24.2",
     junitJupiterVersion = "5.9.2",
     ownerVersion = "1.0.12",
     selenideVersion = "6.12.4",
-    slf4jVersion = "2.0.6"
-//    restAssuredVersion = "5.3.0",
-//    jacksonDatabindVersion = "2.14.2"
+    slf4jVersion = "2.0.6",
+    restAssuredVersion = "5.3.0",
+    jacksonDatabindVersion = "2.14.2"
 
 
 group 'qa.guru'
@@ -37,8 +38,12 @@ repositories {
 dependencies {
     testImplementation(
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "org.assertj:assertj-core:$assertJVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion",
             "org.junit.jupiter:junit-jupiter:$junitJupiterVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
             "com.codeborne:selenide:$selenideVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
