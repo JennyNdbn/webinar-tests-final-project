@@ -6,13 +6,15 @@ plugins {
 
 def allureVersion = "2.21.0",
     assertJVersion = "3.24.2",
+    appiumJavaClientVersion = "8.3.0",
+    jacksonDatabindVersion = "2.14.2",
+    javaFakerVersion = "1.0.2",
     junitJupiterVersion = "5.9.2",
+    lombokVersion = "1.18.26",
     ownerVersion = "1.0.12",
-    selenideVersion = "6.12.4",
-    slf4jVersion = "2.0.6",
     restAssuredVersion = "5.3.0",
-    jacksonDatabindVersion = "2.14.2"
-
+    selenideVersion = "6.12.4",
+    slf4jVersion = "2.0.6"
 
 group 'qa.guru'
 version '1.0-SNAPSHOT'
@@ -41,7 +43,10 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.assertj:assertj-core:$assertJVersion",
             "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion",
+            "io.appium:java-client:$appiumJavaClientVersion",
+            "com.github.javafaker:javafaker:$javaFakerVersion",
             "org.junit.jupiter:junit-jupiter:$junitJupiterVersion",
+            "org.projectlombok:lombok:$lombokVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "com.codeborne:selenide:$selenideVersion",
@@ -59,7 +64,6 @@ test {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-
 }
 
 task UI_test(type: Test) {
@@ -70,5 +74,10 @@ task UI_test(type: Test) {
 task api_test(type: Test) {
     useJUnitPlatform {
         includeTags("api")
+    }
+}
+task mobile_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("mobile")
     }
 }
