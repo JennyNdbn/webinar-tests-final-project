@@ -133,12 +133,12 @@ gradle clean api_test
 #### MOBILE
 
 ```
-gradle clean mobile_test -Denv=${ENV}
+gradle clean mobile_test -DenvMobile=${ENV_MOBILE}
 ```
 
 Для запуска мобильных тестов требуется дополнительно определить переменную `env_mobile`, с помощью которой
-можно переключаться между локальным и удалённым запуском тестов с параметрами по умолчанию. (_`-Denv_mobile=mobile_bs` 
-для удалённого запуска тестов, `-Denv_mobile=emulator` - для локального запуска с помощью эмулятора_).
+можно переключаться между локальным и удалённым запуском тестов с параметрами по умолчанию. (_`-DenvMobile=mobile_bs` 
+для удалённого запуска тестов, `-DenvMobile=emulator` - для локального запуска с помощью эмулятора_).
 
 
 ### Удаленный запуск тестов
@@ -149,7 +149,7 @@ clean test
   -DbrowserVersion=${BROWSER_VERSION} 
   -DbrowserSize=${BROWSER_SIZE} 
   -DremoteUrl=${REMOTE_URL}
-  -Denv=${ENV}
+  -DenvMobile=${ENV_MOBILE}
 ```
 
 > `${BROWSER}` - наименование браузера (_по умолчанию - <code>chrome</code>_).
@@ -171,8 +171,8 @@ A --> D[Android]
 B --> K[api_test]
 C --> E[UI_test]
 D --> G[mobile_test]
-G --> H[env_mobile=emulator]
-G --> F[env_mobile=mobile_bs]
+G --> H[envMobile=emulator]
+G --> F[envMobile=mobile_bs]
 ```
 
 <a id="jenkins"></a>

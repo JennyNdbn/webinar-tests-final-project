@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @EmulatorConfig.LoadPolicy(EmulatorConfig.LoadType.MERGE)
 @Config.Sources({
-        "classpath:${env_mobile}.properties"
+        "classpath:${envMobile}.properties"
 })
 
 public interface EmulatorConfig extends Config {

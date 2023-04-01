@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
-    public static String deviceHost = System.getProperty("env_mobile");
+    public static String deviceHost = System.getProperty("envMobile");
     TestData testData = new TestData();
 
     String iHaveAccountButton = "ru.webinar.mobile:id/tvChangeAction";
