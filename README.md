@@ -154,8 +154,9 @@ A --> C[Web]
 A --> D[Android]
 B --> K[api_test]
 C --> E[UI_test]
-D --> G[mobile_bs]
-D --> H[emulator]
+D --> G[mobile]
+G --> H[emulator]
+G --> F[mobile_bs]
 ```
 
 <a id="jenkins"></a>
