@@ -1,8 +1,9 @@
 package ru.nadobnaya.tests.mobile;
 
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,11 +12,14 @@ import static io.appium.java_client.AppiumBy.id;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
+@Feature("Testing of different types of logging in on webinar mobile app")
 public class MobileLoginScreenTest extends TestBase {
 
-    @Tag("mobile")
-    @DisplayName("Logging in with correct user data")
     @Test
+    @DisplayName("Logging in with correct user credentials")
+    @Story("Testing of logging in with correct user credentials of existing user")
+    @Severity(SeverityLevel.BLOCKER)
+    @Tags({@Tag("mobile"), @Tag("positive")})
     void successfulLogInTest() {
         step("Press \"I already have an account\" button", () -> {
             $(id(iHaveAccountButton)).click();
@@ -31,9 +35,11 @@ public class MobileLoginScreenTest extends TestBase {
         });
     }
 
-    @Tag("mobile")
-    @DisplayName("Testing of a button to log in with SSO")
     @Test
+    @DisplayName("Testing of a button to log in with SSO")
+    @Story("Testing of the possibility to use corporate email to log in using single sign-on technology")
+    @Severity(SeverityLevel.CRITICAL)
+    @Tags({@Tag("mobile"), @Tag("positive")})
     void logInWithSSOButtonTest() {
         step("Press \"I already have an account\" button", () -> {
             $(id(iHaveAccountButton)).click();
@@ -46,9 +52,11 @@ public class MobileLoginScreenTest extends TestBase {
         });
     }
 
-    @Tag("mobile")
-    @DisplayName("Testing of a button to recovery the password")
     @Test
+    @DisplayName("Testing of a button to recovery the password")
+    @Story("Testing of the possibility to recover forgotten password without the need to repeat the email setting")
+    @Severity(SeverityLevel.CRITICAL)
+    @Tags({@Tag("mobile"), @Tag("positive")})
     void forgotPasswordButtonTest() {
         step("Press \"I already have an account\" button", () -> {
             $(id(iHaveAccountButton)).click();

@@ -27,14 +27,14 @@ public class UserStatisticsTests extends TestBase {
         StatisticsResponseModel response =
                 step("Get user contacts using cookie", () ->
                         given(testRequestSpec)
-                                .cookie("sessionId=28abdc7a8061b13a9b6d67724e6f8ec3; Path=/; Secure; HttpOnly; Expires=Tue, 25 Apr 2023 06:19:38 GMT;")
+                                .cookie(userCookie)
                                 .when()
                                 .get("/user/statistics")
                                 .then()
                                 .spec(testResponseSpecWithStatus)
                                 .extract().as(StatisticsResponseModel.class));
         step("Verify single user data", () ->
-                assertThat(response.getContacts().getTotal()).isEqualTo(0));
+                assertThat(response.getContacts().getTotal()).isEqualTo(1));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class UserStatisticsTests extends TestBase {
         ErrorResponseModel response =
                 step("Try using DELETE and check that response status is 403", () ->
                         given(testRequestSpec)
-                                .cookie("sessionId=28abdc7a8061b13a9b6d67724e6f8ec3; Path=/; Secure; HttpOnly; Expires=Tue, 25 Apr 2023 06:19:38 GMT;")
+                                .cookie(userCookie)
                                 .when()
                                 .delete("/user/statistics")
                                 .then()

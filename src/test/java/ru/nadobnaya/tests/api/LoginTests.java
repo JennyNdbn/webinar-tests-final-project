@@ -1,6 +1,7 @@
 package ru.nadobnaya.tests.api;
 
 
+import com.github.javafaker.Faker;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -23,11 +24,17 @@ public class LoginTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("api"), @Tag("positive")})
     void checkLoginStatus() {
+        LoginBodyModel loginData = new LoginBodyModel();
+        loginData.setEmail("Jennyqaguru@gmail.com");
+        loginData.setPassword("123qweASD");
+        loginData.setRememberMe(true);
+        String loginBody = "email=" + loginData.getEmail() + "&password=" + loginData.getPassword() + "&rememberMe=" + loginData.getRememberMe();
+
         step("Check that response status is 200", () -> {
             given(testRequestSpec)
                     .contentType("application/x-www-form-urlencoded; charset=utf-8")
                     //.cookie("sessionId=eecfd74d5e196f0975025f1bbee697f7; Expires=Tue, 25-Apr-2023 05:42:00 GMT; Max-Age=2419200; path=/; SameSite=None; secure; HttpOnly")
-                    .body("email=Jennyqaguru%40gmail.com&password=123qweASD&rememberMe=true")
+                    .body(loginBody)
                     .when()
                     .post("/login")
                     .then()
@@ -44,7 +51,7 @@ public class LoginTests extends TestBase {
         UserResponseModel response =
                 step("Check that response status is 200", () ->
                         given(testRequestSpec)
-                                .cookie("sessionId=28abdc7a8061b13a9b6d67724e6f8ec3; Path=/; Secure; HttpOnly; Expires=Tue, 25 Apr 2023 06:19:38 GMT;")
+                                .cookie(userCookie)
                                 .when()
                                 .get("/login")
                                 .then()
@@ -85,10 +92,20 @@ public class LoginTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("api"), @Tag("negative")})
     void checkWrongLoginStatusNegative() {
+        Faker faker = new Faker();
+        String testEmail = faker.internet().emailAddress();
+        String testPassword = faker.internet().password(6,10,true,true,true);
+
+        LoginBodyModel loginData = new LoginBodyModel();
+        loginData.setEmail(testEmail);
+        loginData.setPassword(testPassword);
+        loginData.setRememberMe(true);
+        String loginBody = "email=" + loginData.getEmail() + "&password=" + loginData.getPassword() + "&rememberMe=" + loginData.getRememberMe();
+
         ErrorResponseModel response =
                 step("Try to login and check that response status is 404", () ->
                         given(testRequestSpec)
-                                .body("email=test%40gmail.com&password=test&rememberMe=true")
+                                .body(loginBody)
                                 .when()
                                 .post("/login")
                                 .then()
