@@ -16,7 +16,7 @@ public class ComdiTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening COMDI page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"),@Tag("COMDI")})
+    @Tags({@Tag("UI"), @Tag("COMDI")})
     void openProductComdiPageTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -36,7 +36,7 @@ public class ComdiTests extends TestBase {
     @Story("Testing of request popup on COMDI product page")
     @Feature("Testing of webinar.ru")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("COMDI")})
+    @Tags({@Tag("UI"), @Tag("COMDI")})
     void popupComdiTest() {
         step("Open COMDI product page", () -> {
             productComdiPage.openPage();
@@ -60,7 +60,7 @@ public class ComdiTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of details button on COMDI product page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("COMDI")})
+    @Tags({@Tag("UI"), @Tag("COMDI")})
     void detailsButtonComdiTest() {
         step("Open COMDI product page", () -> {
             productComdiPage.openPage();

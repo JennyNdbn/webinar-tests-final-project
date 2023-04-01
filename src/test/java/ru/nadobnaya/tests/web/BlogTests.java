@@ -17,7 +17,7 @@ public class BlogTests extends TestBase {
     @Feature("Testing of blog page content")
     @Story("Testing of opening blog window from header and verifying blog header, article and footer")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("blog")})
+    @Tags({@Tag("UI"), @Tag("blog")})
     void blogOpenTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -35,7 +35,7 @@ public class BlogTests extends TestBase {
     @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog header")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("blog")})
+    @Tags({@Tag("UI"), @Tag("blog")})
     void blogHeaderTest() {
         step("Open blog page", () -> {
             blogPage.openPage();
@@ -50,7 +50,7 @@ public class BlogTests extends TestBase {
     @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog article")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("blog")})
+    @Tags({@Tag("UI"), @Tag("blog")})
     void blogArticleTest() {
         step("Open blog page", () -> {
             blogPage.openPage();
@@ -65,7 +65,7 @@ public class BlogTests extends TestBase {
     @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog footer")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("blog")})
+    @Tags({@Tag("UI"), @Tag("blog")})
     void blogFooterTest() {
         step("Open blog page", () -> {
             blogPage.openPage();

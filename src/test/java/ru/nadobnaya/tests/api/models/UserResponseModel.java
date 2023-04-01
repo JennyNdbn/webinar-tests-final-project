@@ -6,10 +6,10 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public @Data class UserResponseModel {
 
-        private Integer id;
-        private String email;
-        private String nickname;
-        private String name;
-        private String defaultEventType;
+    private Integer id;
+    private String email;
+    private String nickname;
+    private String name;
+    private String defaultEventType;
 
 }

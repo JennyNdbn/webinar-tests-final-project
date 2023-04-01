@@ -94,7 +94,7 @@ public class LoginTests extends TestBase {
     void checkWrongLoginStatusNegative() {
         Faker faker = new Faker();
         String testEmail = faker.internet().emailAddress();
-        String testPassword = faker.internet().password(6,10,true,true,true);
+        String testPassword = faker.internet().password(6, 10, true, true, true);
 
         LoginBodyModel loginData = new LoginBodyModel();
         loginData.setEmail(testEmail);

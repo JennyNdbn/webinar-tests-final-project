@@ -13,7 +13,7 @@ public class StudentsEducationTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening education of university students page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"),@Tag("university_students")})
+    @Tags({@Tag("UI"), @Tag("university_students")})
     void openEducationPageTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -32,7 +32,7 @@ public class StudentsEducationTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening enroll page from education page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("university_students")})
+    @Tags({@Tag("UI"), @Tag("university_students")})
     void tasksEducationTest() {
         step("Open education of university students page", () -> {
             studyTaskPage.openPage();

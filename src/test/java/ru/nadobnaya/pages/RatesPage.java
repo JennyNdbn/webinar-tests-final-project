@@ -35,19 +35,4 @@ public class RatesPage {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

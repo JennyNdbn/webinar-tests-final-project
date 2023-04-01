@@ -64,6 +64,7 @@ public class Attach {
                 + getVideoUrl(sessionId)
                 + "' type='video/mp4'></video></body></html>";
     }
+
     public static String getVideoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
         MobileDriverConfig config = ConfigFactory.create(MobileDriverConfig.class);

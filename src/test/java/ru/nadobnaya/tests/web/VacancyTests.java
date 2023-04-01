@@ -16,7 +16,7 @@ public class VacancyTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening vacancy window from side menu")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"),@Tag("vacancy")})
+    @Tags({@Tag("UI"), @Tag("vacancy")})
     void openVacancyWindowTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -37,7 +37,7 @@ public class VacancyTests extends TestBase {
     @Feature("Testing of webinar.ru")
     @Story("Testing of opening CV window from vacancy page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"),@Tag("vacancy")})
+    @Tags({@Tag("UI"), @Tag("vacancy")})
     void vacancyTest() {
         step("Open vacancy page", () -> {
             vacancyPage.openPage();
