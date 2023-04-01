@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
+@Feature("Testing of COMDI page content")
 public class ComdiTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening COMDI product page")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of opening COMDI page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("UI"), @Tag("COMDI")})
@@ -34,7 +34,6 @@ public class ComdiTests extends TestBase {
     @Test
     @DisplayName("Testing request popup on COMDI page")
     @Story("Testing of request popup on COMDI product page")
-    @Feature("Testing of webinar.ru")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("COMDI")})
     void popupComdiTest() {
@@ -57,7 +56,6 @@ public class ComdiTests extends TestBase {
 
     @Test
     @DisplayName("Testing details button on COMDI page")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of details button on COMDI product page")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("COMDI")})

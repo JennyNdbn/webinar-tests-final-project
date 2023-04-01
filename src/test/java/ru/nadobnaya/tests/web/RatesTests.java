@@ -8,12 +8,12 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Evgeniia Nadobnaia")
+@Feature("Testing of rates page content")
 public class RatesTests extends TestBase {
 
     @Test
     @DisplayName("Testing of rates page")
-    @Owner("Evgeniia Nadobnaia")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of rates changing for period of 1, 6, 12 months of educational subscription on rates page")
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("UI"), @Tag("rates")})

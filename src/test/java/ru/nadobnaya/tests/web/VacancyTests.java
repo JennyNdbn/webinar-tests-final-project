@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
+@Feature("Testing of vacancy window content")
 public class VacancyTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening vacancy window")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of opening vacancy window from side menu")
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("UI"), @Tag("vacancy")})
@@ -34,7 +34,6 @@ public class VacancyTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening CV window")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of opening CV window from vacancy page")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("vacancy")})

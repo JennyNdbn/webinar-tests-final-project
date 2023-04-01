@@ -6,11 +6,11 @@ import org.junit.jupiter.api.*;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
+@Feature("Testing of education of university students page content")
 public class StudentsEducationTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening education of university students page")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of opening education of university students page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
     @Tags({@Tag("UI"), @Tag("university_students")})
@@ -29,7 +29,6 @@ public class StudentsEducationTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening enroll page")
-    @Feature("Testing of webinar.ru")
     @Story("Testing of opening enroll page from education page")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("university_students")})

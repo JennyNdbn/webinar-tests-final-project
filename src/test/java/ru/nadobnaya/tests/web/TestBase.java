@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import ru.nadobnaya.drivers.WebDriverProvider;
 import ru.nadobnaya.helpers.Attach;
 import ru.nadobnaya.pages.*;
 
@@ -30,14 +31,6 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.pageLoadTimeout = 100000;
         Configuration.timeout = 15000;
-
-//            String remote = System.getProperty("remote", "");
-//            Configuration.baseUrl = System.getProperty("baseUrl", "https://webinar.ru/");
-//            Configuration.browser = System.getProperty("browser", "chrome");
-//            Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-//            Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-//
-//            Configuration.remote = System.getProperty("remote", "");
         WebDriverProvider provider = new WebDriverProvider() {
         };
 

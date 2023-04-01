@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
+@Feature("Testing of blog page content")
 public class BlogTests extends TestBase {
 
     @Test
     @DisplayName("Testing of blog page opening")
-    @Feature("Testing of blog page content")
     @Story("Testing of opening blog window from header and verifying blog header, article and footer")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("blog")})
@@ -32,7 +32,6 @@ public class BlogTests extends TestBase {
 
     @Test
     @DisplayName("Testing of blog header")
-    @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog header")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("blog")})
@@ -47,7 +46,6 @@ public class BlogTests extends TestBase {
 
     @Test
     @DisplayName("Testing of blog article")
-    @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog article")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("blog")})
@@ -62,7 +60,6 @@ public class BlogTests extends TestBase {
 
     @Test
     @DisplayName("Testing of blog footer")
-    @Feature("Testing of blog page content")
     @Story("Testing of opening blog and verifying blog footer")
     @Severity(SeverityLevel.CRITICAL)
     @Tags({@Tag("UI"), @Tag("blog")})
