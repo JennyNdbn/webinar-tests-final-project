@@ -3,7 +3,7 @@ package ru.nadobnaya.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:${env_web}.properties"
 })
 
 public interface WebDriverConfig extends Config {

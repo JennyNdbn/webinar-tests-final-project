@@ -3,7 +3,7 @@ package ru.nadobnaya.config;
 import org.aeonbits.owner.Config;
 
 @EmulatorConfig.LoadPolicy(EmulatorConfig.LoadType.MERGE)
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:${env_mobile}.properties"})
 public interface MobileDriverConfig extends Config {
     @Key("login")
     String login();
