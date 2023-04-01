@@ -11,7 +11,6 @@ import static ru.nadobnaya.helpers.CustomApiListener.withCustomTemplates;
 
 public class TestSpecs {
 
-
     public static RequestSpecification testRequestSpec = with()
             .log().uri()
             .log().headers()

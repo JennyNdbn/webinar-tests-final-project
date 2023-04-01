@@ -10,6 +10,4 @@ public class TestData {
     String vanancy = "Вакансии";
     String products = "Продукты";
     String tasks = "Задачи";
-
-
 }

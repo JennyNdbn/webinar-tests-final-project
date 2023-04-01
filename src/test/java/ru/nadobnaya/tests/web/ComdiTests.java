@@ -28,7 +28,6 @@ public class ComdiTests extends TestBase {
         step("Verify that COMDI page has opened", () -> {
             productComdiPage.verifyProductComdiPageOpen();
         });
-
     }
 
     @Test
@@ -70,6 +69,5 @@ public class ComdiTests extends TestBase {
             comdiPage.verifyDetailsWindowOpen();
         });
     }
-
 
 }
