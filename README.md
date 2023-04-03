@@ -208,7 +208,7 @@ E --> J[envWeb=remote]
 </p>
 
 <a id="testops"></a>
-## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/1873/test-cases?treeId=3601"> Allure TestOps </a>   
+## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2083/dashboards"> Allure TestOps </a>   
 
 ### Доска
 <p align="center">
