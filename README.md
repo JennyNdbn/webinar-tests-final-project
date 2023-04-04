@@ -228,12 +228,12 @@ E --> J[envWeb=remote]
 
 ### Запуски сборок
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunches.PNG">
+<img src="images/screenshots/AllureTestOpsLaunches.png">
 </p>
 
 ### Запуск выбранных тестов из Allure TestOps
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunchFromTestOps.PNG">
+<img src="images/screenshots/AllureTestOpsLaunchFromTestOps.png">
 </p>
 
 
