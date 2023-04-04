@@ -26,6 +26,7 @@
 - [x] Использование request/response спецификаций для API тестов
 - [x] Custom Allure listener для API requests/responses логов
 - [x] Интеграция с `Allure TestOps`
+- [x] Возможность запуска тестов напрямую из `Allure TestOps`
 - [x] Интеграция с `Jira`
 - [x] Автотесты оформлены как тестовая документация посредством аннотаций `Allure`
 
@@ -223,6 +224,16 @@ E --> J[envWeb=remote]
 ### Пример мануального тест-кейса
 <p align="center">
 <img src="images/screenshots/AllureTestOpsManualTest.PNG">
+</p>
+
+### Запуски сборок
+<p align="center">
+<img src="images/screenshots/AllureTestOpsLaunches.PNG">
+</p>
+
+### Запуск выбранных тестов из Allure TestOps
+<p align="center">
+<img src="images/screenshots/AllureTestOpsLaunchFromTestOps.PNG">
 </p>
 
 
