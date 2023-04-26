@@ -7,13 +7,13 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
 @Feature("Testing of education of university students page content")
+@Tags({@Tag("ui"), @Tag("university_students")})
 public class StudentsEducationTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening education of university students page")
     @Story("Testing of opening education of university students page from header by using hover action")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"), @Tag("university_students")})
     void openEducationPageTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -31,7 +31,6 @@ public class StudentsEducationTests extends TestBase {
     @DisplayName("Testing of opening enroll page")
     @Story("Testing of opening enroll page from education page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("university_students")})
     void tasksEducationTest() {
         step("Open education of university students page", () -> {
             studyTaskPage.openPage();

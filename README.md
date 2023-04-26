@@ -122,7 +122,7 @@ Allure-отчет включает в себя:
 #### WEB
 
 ```
-gradle clean UI_test 
+gradle clean ui_test 
 ```
 
 #### API
@@ -170,7 +170,7 @@ A[tag] --> B[API]
 A --> C[Web]
 A --> D[Android]
 B --> K[api_test]
-C --> E[UI_test]
+C --> E[ui_test]
 D --> G[mobile_test]
 G --> H[envMobile=emulator]
 G --> F[envMobile=mobile_bs]

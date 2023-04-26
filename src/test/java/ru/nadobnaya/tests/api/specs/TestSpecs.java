@@ -17,12 +17,12 @@ public class TestSpecs {
             .log().body()
             .filter(withCustomTemplates())
             .contentType("application/x-www-form-urlencoded; charset=utf-8");
-    public static ResponseSpecification testResponseSpecWithStatus = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecStatusCodeIs200 = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .expectStatusCode(200)
             .build();
-    public static ResponseSpecification testResponseSpecWithoutStatus = new ResponseSpecBuilder()
+    public static ResponseSpecification responseSpecWithoutStatus = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
             .build();

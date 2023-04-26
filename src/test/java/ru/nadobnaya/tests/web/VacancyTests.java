@@ -10,13 +10,13 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
 @Feature("Testing of vacancy window content")
+@Tags({@Tag("ui"), @Tag("vacancy")})
 public class VacancyTests extends TestBase {
 
     @Test
     @DisplayName("Testing of opening vacancy window")
     @Story("Testing of opening vacancy window from side menu")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"), @Tag("vacancy")})
     void openVacancyWindowTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -36,7 +36,6 @@ public class VacancyTests extends TestBase {
     @DisplayName("Testing of opening CV window")
     @Story("Testing of opening CV window from vacancy page")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("vacancy")})
     void vacancyTest() {
         step("Open vacancy page", () -> {
             vacancyPage.openPage();

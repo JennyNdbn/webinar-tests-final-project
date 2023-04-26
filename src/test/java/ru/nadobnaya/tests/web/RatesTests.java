@@ -16,7 +16,7 @@ public class RatesTests extends TestBase {
     @DisplayName("Testing of rates page")
     @Story("Testing of rates changing for period of 1, 6, 12 months of educational subscription on rates page")
     @Severity(SeverityLevel.BLOCKER)
-    @Tags({@Tag("UI"), @Tag("rates")})
+    @Tags({@Tag("ui"), @Tag("rates")})
     void priceChangingTest() {
         step("Open main page", () -> {
             mainPage.openPage();

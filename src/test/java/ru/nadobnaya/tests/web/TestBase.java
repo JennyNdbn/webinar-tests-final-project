@@ -28,11 +28,12 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
+        WebDriverProvider.config();
         Configuration.pageLoadStrategy = "eager";
         Configuration.pageLoadTimeout = 100000;
         Configuration.timeout = 15000;
-        WebDriverProvider provider = new WebDriverProvider() {
-        };
+//        WebDriverProvider provider = new WebDriverProvider() {
+//        };
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

@@ -11,13 +11,13 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Evgeniia Nadobnaia")
 @Feature("Testing of blog page content")
+@Tags({@Tag("ui"), @Tag("blog")})
 public class BlogTests extends TestBase {
 
     @Test
     @DisplayName("Testing of blog page opening")
     @Story("Testing of opening blog window from header and verifying blog header, article and footer")
-    @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("blog")})
+    @Severity(SeverityLevel.BLOCKER)
     void blogOpenTest() {
         step("Open main page", () -> {
             mainPage.openPage();
@@ -34,7 +34,6 @@ public class BlogTests extends TestBase {
     @DisplayName("Testing of blog header")
     @Story("Testing of opening blog and verifying blog header")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("blog")})
     void blogHeaderTest() {
         step("Open blog page", () -> {
             blogPage.openPage();
@@ -48,7 +47,6 @@ public class BlogTests extends TestBase {
     @DisplayName("Testing of blog article")
     @Story("Testing of opening blog and verifying blog article")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("blog")})
     void blogArticleTest() {
         step("Open blog page", () -> {
             blogPage.openPage();
@@ -62,7 +60,6 @@ public class BlogTests extends TestBase {
     @DisplayName("Testing of blog footer")
     @Story("Testing of opening blog and verifying blog footer")
     @Severity(SeverityLevel.CRITICAL)
-    @Tags({@Tag("UI"), @Tag("blog")})
     void blogFooterTest() {
         step("Open blog page", () -> {
             blogPage.openPage();

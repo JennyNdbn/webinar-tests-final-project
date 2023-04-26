@@ -31,7 +31,7 @@ public class UserStatisticsTests extends TestBase {
                                 .when()
                                 .get("/user/statistics")
                                 .then()
-                                .spec(testResponseSpecWithStatus)
+                                .spec(responseSpecStatusCodeIs200)
                                 .extract().as(StatisticsResponseModel.class));
         step("Verify single user data", () ->
                 assertThat(response.getContacts().getTotal()).isEqualTo(1));
@@ -50,7 +50,7 @@ public class UserStatisticsTests extends TestBase {
                                 .when()
                                 .delete("/user/statistics")
                                 .then()
-                                .spec(testResponseSpecWithoutStatus)
+                                .spec(responseSpecWithoutStatus)
                                 .statusCode(403)
                                 .extract().as(ErrorResponseModel.class));
         step("Verify error message", () ->
