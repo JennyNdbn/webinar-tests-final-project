@@ -50,7 +50,7 @@ public class TestBase {
     @AfterEach
     void afterEach() {
         Attach.pageSource();
-        if (deviceHost.equals("mobile_bs")) {
+        if ("mobile_bs".equals(deviceHost)) {
             Attach.addVideo(sessionId().toString());
         }
         closeWebDriver();
